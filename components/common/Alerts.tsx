@@ -18,6 +18,10 @@ function SimpleAlert({ alert }: SimpleAlertProps) {
     alert.onClose()
   }, [alert])
 
+  const onTouch = useCallback(() => {
+    alert.onClose()
+  }, [alert])
+
   return (
     <Dialog
       fullWidth
