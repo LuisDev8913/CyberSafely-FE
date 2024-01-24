@@ -1,5 +1,4 @@
-import CloseIcon from '@mui/icons-material/CloseOutlined'
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton } from '@mui/material'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material'
 import { useCallback, useState } from 'react'
 import { AlertInternal, useAlert } from '../../utils/context/alert'
 
@@ -34,7 +33,7 @@ function SimpleAlert({ alert }: SimpleAlertProps) {
         },
       }}
     >
-      <IconButton
+      {/* <IconButton
         size="small"
         onClick={onClose}
         sx={(theme) =>
@@ -47,7 +46,7 @@ function SimpleAlert({ alert }: SimpleAlertProps) {
         }
       >
         <CloseIcon fontSize="small" />
-      </IconButton>
+      </IconButton> */}
       <DialogTitle sx={alert?.styleProps?.dialogTitle}>{alert.title}</DialogTitle>
       <DialogContent sx={alert?.styleProps?.dialogContent}>
         {!!alert.message && <DialogContentText>{alert.message}</DialogContentText>}
